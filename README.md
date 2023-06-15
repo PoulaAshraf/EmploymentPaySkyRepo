@@ -11,4 +11,8 @@ SQL Server
 Getting Started
 To get started with the project, follow these steps:
 
-Clone the repository from GitHub:
+1- Clone the repository from GitHub:
+  https://github.com/PoulaAshraf/EmploymentPaySkyRepo
+2- Open the project in Visual Studio 2022
+3- Update the connection string in the appsettings.json file to point to your SQL Server instance:
+
