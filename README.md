@@ -15,4 +15,8 @@ To get started with the project, follow these steps:
   https://github.com/PoulaAshraf/EmploymentPaySkyRepo
 2- Open the project in Visual Studio 2022
 3- Update the connection string in the appsettings.json file to point to your SQL Server instance:
-
+  {
+  "ConnectionStrings": {
+    "MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+  }
