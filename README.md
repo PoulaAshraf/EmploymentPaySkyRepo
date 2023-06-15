@@ -22,3 +22,8 @@ To get started with the project, follow these steps:
   }
 
   Replace (localdb)\\mssqllocaldb with the name of your SQL Server instance and MyDatabase with the name of your database.
+4- Run the following command in the Nuget Package Console to create the database 
+  update-database 
+  Note: Migration files attached in project
+5- In Project we have Script folder which has a sql query to archive expired vacancies so, you can execute it in your database and create daily job for it 
+6- Project has Postman collection which has Request samples and it's response 
