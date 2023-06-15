@@ -20,3 +20,5 @@ To get started with the project, follow these steps:
     "MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
   }
+
+  Replace (localdb)\\mssqllocaldb with the name of your SQL Server instance and MyDatabase with the name of your database.
