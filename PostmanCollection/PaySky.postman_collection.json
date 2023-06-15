@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "9cda2995-a538-469d-b17d-74ca8d8f02e5",
+		"name": "PaySky",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"PaySkyApplicant@gmail.com\",\r\n  \"password\": \"PaySkyApplicant@2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:27999/api/Account/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Account",
+								"Login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"CompanyName@gmail.com\",\r\n  \"password\": \"CompanyName@2020\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:27999/api/Account/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Account",
+										"Login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 06:24:07 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"message\": null,\n    \"isAuthenticated\": true,\n    \"username\": \"CompanyName\",\n    \"email\": \"CompanyName@gmail.com\",\n    \"roles\": \"Employer\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDb21wYW55TmFtZUBnbWFpbC5jb20iLCJqdGkiOiI3OTMxNjUwZS1hZWRmLTQwMTItOGYyNi0zYzUzNzJjOWM3OTUiLCJlbWFpbCI6IkNvbXBhbnlOYW1lQGdtYWlsLmNvbSIsInVpZCI6IjNmZTRmYmM4LTUzYmMtNGJjNS05YmFjLWJhNGRjYjY4YmI0MiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcGxveWVyIiwiZXhwIjoxNjg2ODEzODQ3LCJpc3MiOiJQYXlTa3lFbXBsb3ltZW50U3lzdGVtIiwiYXVkIjoiUGF5U2t5QXVkaWVuY2UifQ.JClpKW5Ykf_p_Jhoc-wBNMzek3KEVBmM8vH8sd_o7u4\",\n    \"expiresOn\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "ApplicantRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"qualification\": \"Bachelor\",\r\n  \"register\": {\r\n    \"username\": \"PaySkyApplicant\",\r\n    \"email\": \"PaySkyApplicant@gmail.com\",\r\n    \"password\": \"PaySkyApplicant@2020\",\r\n    \"isEmployer\": false\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:27999/api/Account/ApplicantRegister",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Account",
+								"ApplicantRegister"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ApplicantRegister",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"qualification\": \"Bachelor\",\r\n  \"register\": {\r\n    \"username\": \"PaySkyApplicant\",\r\n    \"email\": \"PaySkyApplicant@gmail.com\",\r\n    \"password\": \"PaySkyApplicant@2020\",\r\n    \"isEmployer\": false\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:27999/api/Account/ApplicantRegister",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Account",
+										"ApplicantRegister"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 06:56:38 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"36bd3c4b-d781-41f5-9035-29e50113ec0f\",\n    \"message\": null,\n    \"isAuthenticated\": true,\n    \"username\": \"PaySkyApplicant\",\n    \"email\": \"PaySkyApplicant@gmail.com\",\n    \"roles\": \"Applicant\",\n    \"token\": null,\n    \"expiresOn\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "EmployerRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company\": \"PaySky\",\r\n  \"register\": {\r\n    \"username\": \"PaySkyApplicant\",\r\n    \"email\": \"PaySkyApplicant@gmail.com\",\r\n    \"password\": \"PaySkyApplicant@2020\",\r\n    \"isEmployer\": false\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:27999/api/Account/ApplicantRegister",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Account",
+								"ApplicantRegister"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vacancies",
+			"item": [
+				{
+					"name": "Add Vacancy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDb21wYW55TmFtZUBnbWFpbC5jb20iLCJqdGkiOiIxOTRjOGI1NS0yZTk3LTRhYTQtOTQzZi03MDZhOTRkMmQwMTMiLCJlbWFpbCI6IkNvbXBhbnlOYW1lQGdtYWlsLmNvbSIsInVpZCI6IjNmZTRmYmM4LTUzYmMtNGJjNS05YmFjLWJhNGRjYjY4YmI0MiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcGxveWVyIiwiZXhwIjoxNjg2ODA5OTYxLCJpc3MiOiJQYXlTa3lFbXBsb3ltZW50U3lzdGVtIiwiYXVkIjoiUGF5U2t5QXVkaWVuY2UifQ.5HrW4uWxyQEHkum6EfSTPfBYEEnGkF7dC_QkcV9B53M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobTitle\": \"Title\",\r\n  \"jobDescription\": \"Desc\",\r\n  \"jobType\": \"Type\",\r\n  \"expiryDate\": \"2023-06-24T19:27:39.900Z\",\r\n  \"isActive\": true,\r\n  \"maxApplicant\": 10,\r\n  \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:27999/api/Vacancy/AddVacancy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Vacancy",
+								"AddVacancy"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Vacancy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"jobTitle\": \"Title\",\r\n  \"jobDescription\": \"Desc\",\r\n  \"jobType\": \"Type\",\r\n  \"expiryDate\": \"2023-06-24T19:27:39.900Z\",\r\n  \"isActive\": true,\r\n  \"maxApplicant\": 10,\r\n  \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/AddVacancy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"AddVacancy"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 05:34:56 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "Vacancy Added Successfuly"
+						}
+					]
+				},
+				{
+					"name": "GetAllVacancies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQYXlTa3lBcHBsaWNhbnRAZ21haWwuY29tIiwianRpIjoiOWRlNjg4ZmUtZGUzMS00NjJlLWI4NDctODViYTY3MWU2MTdkIiwiZW1haWwiOiJQYXlTa3lBcHBsaWNhbnRAZ21haWwuY29tIiwidWlkIjoiMzZiZDNjNGItZDc4MS00MWY1LTkwMzUtMjllNTAxMTNlYzBmIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQXBwbGljYW50IiwiZXhwIjoxNjg2ODIxMTUxLCJpc3MiOiJQYXlTa3lFbXBsb3ltZW50U3lzdGVtIiwiYXVkIjoiUGF5U2t5QXVkaWVuY2UifQ.wlTEOpx5-ubk4oXtodtcCIPzOCCopKhtA1EOBT7e_hU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Vacancy",
+								"GetAllVacancies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllVacancies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"GetAllVacancies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 05:36:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"vacancyId\": 1,\n        \"jobTitle\": \"Title\",\n        \"jobDescription\": \"Desc\",\n        \"jobType\": \"Type\",\n        \"postedDate\": \"2023-06-15T08:34:18.66782\",\n        \"expiryDate\": \"2023-06-24T19:27:39.9\",\n        \"isActive\": true,\n        \"maxApplicant\": 10,\n        \"isArchived\": false,\n        \"noOfApplied\": 0,\n        \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\",\n        \"employer\": null\n    }\n]"
+						},
+						{
+							"name": "GetAllVacancies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"GetAllVacancies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 08:27:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"vacancyId\": 1,\n        \"jobTitle\": \"Edit Title\",\n        \"jobDescription\": \"Edit Desc\",\n        \"jobType\": \"Type\",\n        \"postedDate\": \"2023-06-15T08:34:18.66782\",\n        \"expiryDate\": \"2023-06-25T05:41:44.309\",\n        \"isActive\": true,\n        \"maxApplicant\": 100,\n        \"isArchived\": false,\n        \"noOfApplied\": 0,\n        \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\",\n        \"employer\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetVacancyById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Vacancy",
+								"GetAllVacancies"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetVacancyById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies?id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"GetAllVacancies"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 05:38:30 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"vacancyId\": 1,\n        \"jobTitle\": \"Title\",\n        \"jobDescription\": \"Desc\",\n        \"jobType\": \"Type\",\n        \"postedDate\": \"2023-06-15T08:34:18.66782\",\n        \"expiryDate\": \"2023-06-24T19:27:39.9\",\n        \"isActive\": true,\n        \"maxApplicant\": 10,\n        \"isArchived\": false,\n        \"noOfApplied\": 0,\n        \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\",\n        \"employer\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetVacancyByTitle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies?title=Title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Vacancy",
+								"GetAllVacancies"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Title"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetVacancyByTitle",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/GetAllVacancies?title=Title",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"GetAllVacancies"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "Title"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 05:39:45 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"vacancyId\": 1,\n        \"jobTitle\": \"Title\",\n        \"jobDescription\": \"Desc\",\n        \"jobType\": \"Type\",\n        \"postedDate\": \"2023-06-15T08:34:18.66782\",\n        \"expiryDate\": \"2023-06-24T19:27:39.9\",\n        \"isActive\": true,\n        \"maxApplicant\": 10,\n        \"isArchived\": false,\n        \"noOfApplied\": 0,\n        \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\",\n        \"employer\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "EditVacancy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "vacancyId",
+								"value": "1",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobTitle\": \"Edit Title\",\r\n  \"jobDescription\": \"Edit Desc\",\r\n  \"jobType\": \"Type\",\r\n  \"expiryDate\": \"2023-06-25T05:41:44.309Z\",\r\n  \"isActive\": true,\r\n  \"maxApplicant\": 100,\r\n  \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:27999/api/Vacancy/EditVacancy?vacancyId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Vacancy",
+								"EditVacancy"
+							],
+							"query": [
+								{
+									"key": "vacancyId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "EditVacancy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "vacancyId",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"jobTitle\": \"Edit Title\",\r\n  \"jobDescription\": \"Edit Desc\",\r\n  \"jobType\": \"Type\",\r\n  \"expiryDate\": \"2023-06-25T05:41:44.309Z\",\r\n  \"isActive\": true,\r\n  \"maxApplicant\": 100,\r\n  \"id\": \"3fe4fbc8-53bc-4bc5-9bac-ba4dcb68bb42\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/EditVacancy?vacancyId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"EditVacancy"
+									],
+									"query": [
+										{
+											"key": "vacancyId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 06:18:52 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "Vacancy Updated Successfuly"
+						}
+					]
+				},
+				{
+					"name": "DeactivateVacancy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDb21wYW55TmFtZUBnbWFpbC5jb20iLCJqdGkiOiI3OTMxNjUwZS1hZWRmLTQwMTItOGYyNi0zYzUzNzJjOWM3OTUiLCJlbWFpbCI6IkNvbXBhbnlOYW1lQGdtYWlsLmNvbSIsInVpZCI6IjNmZTRmYmM4LTUzYmMtNGJjNS05YmFjLWJhNGRjYjY4YmI0MiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcGxveWVyIiwiZXhwIjoxNjg2ODEzODQ3LCJpc3MiOiJQYXlTa3lFbXBsb3ltZW50U3lzdGVtIiwiYXVkIjoiUGF5U2t5QXVkaWVuY2UifQ.JClpKW5Ykf_p_Jhoc-wBNMzek3KEVBmM8vH8sd_o7u4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:27999/api/Vacancy/DeactivateVacancy?vacancyId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Vacancy",
+								"DeactivateVacancy"
+							],
+							"query": [
+								{
+									"key": "vacancyId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeactivateVacancy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:27999/api/Vacancy/DeactivateVacancy?vacancyId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Vacancy",
+										"DeactivateVacancy"
+									],
+									"query": [
+										{
+											"key": "vacancyId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 06:24:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "Vacancy is inactive"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Applicant",
+			"item": [
+				{
+					"name": "GetApplicationsForVacancy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQYXlTa3lBcHBsaWNhbnRAZ21haWwuY29tIiwianRpIjoiMTE1MTM0MDEtMDM1MC00ZWEwLThkMzYtYjhkODE5Y2RlZDEwIiwiZW1haWwiOiJQYXlTa3lBcHBsaWNhbnRAZ21haWwuY29tIiwidWlkIjoiMzZiZDNjNGItZDc4MS00MWY1LTkwMzUtMjllNTAxMTNlYzBmIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQXBwbGljYW50IiwiZXhwIjoxNjg2ODE1ODc0LCJpc3MiOiJQYXlTa3lFbXBsb3ltZW50U3lzdGVtIiwiYXVkIjoiUGF5U2t5QXVkaWVuY2UifQ.Ny-Mh-nGQg7L8C4vLMEcqHoTU8YbrR6VXITqmJGxd6A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:27999/api/Applicant/GetAllApplications?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Applicant",
+								"GetAllApplications"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetApplicationsForVacancy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:27999/api/Applicant/GetAllApplications?id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Applicant",
+										"GetAllApplications"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 07:46:30 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jobTitle\": \"Edit Title\",\n    \"jobDescription\": \"Edit Desc\",\n    \"jobType\": \"Type\",\n    \"postedDate\": \"2023-06-15T08:34:18.66782\",\n    \"noOfApplied\": 0,\n    \"applicants\": [\n        {\n            \"username\": \"PaySkyApplicant\",\n            \"email\": \"PaySkyApplicant@gmail.com\",\n            \"qualification\": \"Bachelor\"\n        },\n        {\n            \"username\": \"PaySkyApplicant\",\n            \"email\": \"PaySkyApplicant@gmail.com\",\n            \"qualification\": \"Bachelor\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "AddApplication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQYXlTa3lBcHBsaWNhbnRAZ21haWwuY29tIiwianRpIjoiMTE1MTM0MDEtMDM1MC00ZWEwLThkMzYtYjhkODE5Y2RlZDEwIiwiZW1haWwiOiJQYXlTa3lBcHBsaWNhbnRAZ21haWwuY29tIiwidWlkIjoiMzZiZDNjNGItZDc4MS00MWY1LTkwMzUtMjllNTAxMTNlYzBmIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQXBwbGljYW50IiwiZXhwIjoxNjg2ODE1ODc0LCJpc3MiOiJQYXlTa3lFbXBsb3ltZW50U3lzdGVtIiwiYXVkIjoiUGF5U2t5QXVkaWVuY2UifQ.Ny-Mh-nGQg7L8C4vLMEcqHoTU8YbrR6VXITqmJGxd6A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "vacancy",
+								"value": "1",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:27999/api/Applicant/AddApplication?vacancy=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "27999",
+							"path": [
+								"api",
+								"Applicant",
+								"AddApplication"
+							],
+							"query": [
+								{
+									"key": "vacancy",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AddApplication",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "vacancy",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:27999/api/Applicant/AddApplication?vacancy=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "27999",
+									"path": [
+										"api",
+										"Applicant",
+										"AddApplication"
+									],
+									"query": [
+										{
+											"key": "vacancy",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jun 2023 07:07:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "You're applied"
+						}
+					]
+				}
+			]
+		}
+	]
+}
