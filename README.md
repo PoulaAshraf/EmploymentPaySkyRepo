@@ -26,4 +26,4 @@ To get started with the project, follow these steps:
   update-database 
   Note: Migration files attached in project
 5- In Project we have Script folder which has a sql query to archive expired vacancies so, you can execute it in your database and create daily job for it 
-6- Project has Postman collection which has Request samples and it's response 
+6- Project has Postman collection which has Request samples and its response 
