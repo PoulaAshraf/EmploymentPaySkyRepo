@@ -1,12 +1,14 @@
-using EmploymentApi.Contracts;
-using EmploymentApi.Models;
-using EmploymentApi.Services;
+using EmploymentApi.Core.Contracts;
+using Data.Models;
+using EmploymentApi.Core.Services;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
+using EmploymentApi.Core.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +31,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 );
 
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddAuthentication(options =>
 {
@@ -55,6 +58,9 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+//Hangfire
+builder.Services.AddHangfire(x => x.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHangfireServer();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -77,6 +83,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseHangfireDashboard();
 app.UseCors("CorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmploymentApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230613192843_seedRoles")]
-    partial class seedRoles
+    [Migration("20230616121945_archiving")]
+    partial class archiving
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,14 +27,14 @@ namespace EmploymentApi.Migrations
 
             modelBuilder.Entity("EmploymentApi.Models.Applicant", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<string>("ApplicantId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Qualification")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ApplicantId");
 
                     b.ToTable("Applicant");
                 });
@@ -64,17 +64,32 @@ namespace EmploymentApi.Migrations
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsArchived")
                         .HasColumnType("bit");
 
+                    b.Property<string>("JobDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("JobTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("JobType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MaxApplicant")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NoOfApplied")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("PostedDate")
@@ -82,7 +97,76 @@ namespace EmploymentApi.Migrations
 
                     b.HasKey("VacancyId");
 
+                    b.HasIndex("Id");
+
                     b.ToTable("Vacancy");
+                });
+
+            modelBuilder.Entity("EmploymentApi.Models.VacancyApplications", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("ApplicantId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("AppliedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VacancyId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ApplicantId");
+
+                    b.HasIndex("VacancyId");
+
+                    b.ToTable("VacancyApplications");
+                });
+
+            modelBuilder.Entity("EmploymentApi.Models._archVacancies", b =>
+                {
+                    b.Property<int>("ArchivedVacancyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ArchivedVacancyId"));
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("JobDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaxApplicant")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NoOfApplied")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PostedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ArchivedVacancyId");
+
+                    b.ToTable("_archVacancies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -302,7 +386,7 @@ namespace EmploymentApi.Migrations
                 {
                     b.HasOne("EmploymentApi.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
-                        .HasForeignKey("Id")
+                        .HasForeignKey("ApplicantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -318,6 +402,36 @@ namespace EmploymentApi.Migrations
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("EmploymentApi.Models.Vacancy", b =>
+                {
+                    b.HasOne("EmploymentApi.Models.Employer", "Employer")
+                        .WithMany()
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employer");
+                });
+
+            modelBuilder.Entity("EmploymentApi.Models.VacancyApplications", b =>
+                {
+                    b.HasOne("EmploymentApi.Models.Applicant", "Applicant")
+                        .WithMany()
+                        .HasForeignKey("ApplicantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EmploymentApi.Models.Vacancy", "Vacancy")
+                        .WithMany()
+                        .HasForeignKey("VacancyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Applicant");
+
+                    b.Navigation("Vacancy");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

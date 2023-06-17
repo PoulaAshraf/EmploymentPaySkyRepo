@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using EmploymentApi.Contracts;
-using EmploymentApi.DTOs;
-using EmploymentApi.Models;
+using EmploymentApi.Core.Contracts;
+using EmploymentApi.Core.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

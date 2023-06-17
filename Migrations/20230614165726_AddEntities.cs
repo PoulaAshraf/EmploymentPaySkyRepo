@@ -67,13 +67,13 @@ namespace EmploymentApi.Migrations
                         column: x => x.ApplicantId1,
                         principalTable: "Applicant",
                         principalColumn: "ApplicantId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_VacancyApplications_Vacancy_VacancyId",
                         column: x => x.VacancyId,
                         principalTable: "Vacancy",
                         principalColumn: "VacancyId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -97,7 +97,7 @@ namespace EmploymentApi.Migrations
                 column: "ApplicantId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.NoAction);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Vacancy_Employer_Id",
@@ -105,7 +105,7 @@ namespace EmploymentApi.Migrations
                 column: "Id",
                 principalTable: "Employer",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.NoAction);
+                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
@@ -153,7 +153,7 @@ namespace EmploymentApi.Migrations
                 column: "Id",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.NoAction);
+                onDelete: ReferentialAction.Cascade);
         }
     }
 }

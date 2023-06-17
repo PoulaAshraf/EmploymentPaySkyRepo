@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
-using EmploymentApi.Contracts;
-using EmploymentApi.DTOs;
-using EmploymentApi.Models;
+using EmploymentApi.Core.Contracts;
+using EmploymentApi.Core.DTOs;
+using Data.Models;
+using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,17 @@ namespace EmploymentApi.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+
+        [HttpGet]
+        [Route("ArchiveExpiryVacancies")]
+        public String ArchiveExpiryVacancies()
+        {
+            //Recurring Job - this job is executed many times on the specified cron schedule
+            RecurringJob.AddOrUpdate(() => _unitOfWork.Vacancy.ArchivingExpiredVacancies(), Cron.Daily);
+
+            return "offer sent!";
+        }
+
 
         [HttpPost("AddVacancy")]
         [Authorize(Roles = "Employer")]

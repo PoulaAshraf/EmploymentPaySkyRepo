@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using EmploymentApi.Contracts;
-using EmploymentApi.DTOs;
-using EmploymentApi.Models;
-using EmploymentApi.Services;
+using EmploymentApi.Core.Contracts;
+using EmploymentApi.Core.DTOs;
+using EmploymentApi.Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Protocols;
